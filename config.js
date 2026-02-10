@@ -4,17 +4,22 @@ var config = {
     // 句子的长度可以任意， 你可以写十句话， 二十句话都可以
     // 每句话尽量不要超过15个字,不然展示效果可能不太好
     texts: [
-        "送给我",      //这里,每句话结尾的最后一个逗号必须是英文的哦!! 很重要哦!!
-        "心爱的小可爱",  // 同上...
-        "今天是你的生日",
-        "这是我们在一起的",
-        "第三个生日了哦",
-        "去年的生日",
-        "还记得在王婆串串吃的呢",
-        "今年要吃好的喽哦",
-        "要把我家可爱猪猪喂饱饱",
-        "然后抱走",
-        "YAMI~~",
+        "To my love,",
+"My dearest Sona,",
+"Sometimes I think about our very first messages,",
+"and I still feel that same little spark,",
+"Since then, you’ve become my favorite part of every day,",
+"Your voice calms me,",
+"Your smile stays with me,",
+"With you, even ordinary moments feel like something to keep,",
+"Thank you for being gentle with my heart,",
+"Thank you for choosing us,",
+"I want more mornings, more laughs, more long hugs,",
+"More tiny traditions that only we understand,",
+"More of your hand in mine,",
+"Always you,",
+"Happy Valentine’s Day ❤",
+
     ],
     wish: "小可爱&&大傻子相爱了",  //这里,每句话结尾的最后一个逗号必须是英文的哦!! 很重要哦!!
     // 时间的格式很重要哦，一定要是下面这个格式!!
