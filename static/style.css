@@ -4,38 +4,55 @@
 */
 
 html, body {
-  width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
 }
 
-html, body { height: 100%; margin: 0; }
-
 body{
-  background-image: url("./boy-girl/kaskad.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: cover !important;
+  background: url("./boy-girl/kaskad.png") center center / cover no-repeat fixed;
+}
+
+/* Сцена 500px по центру */
+#stage{
+  width: min(900px, 92vw);   /* сцена шире и адаптивная */
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;         /* на весь экран по высоте */
+  overflow: hidden;
 }
 
 
 
 .pass-time{
-    color:white;
-    font-size:12px;
-    line-height: 20px;
-    margin:0 auto;
-    text-align: center;
+  width: min(700px, 90%);
+  margin: 18px auto 10px;
+  padding: 12px 14px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
 }
 
-div#content {
-  position: relative;
+.pass-time, #marquee{
   width: 100%;
-  max-width: none;   /* убрали ограничение */
-  margin: 0;         /* убрали центрирование */
-  min-height: 100vh; /* высота экрана */
-  overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 12px;
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.45);   /* тёмная подложка */
+  backdrop-filter: blur(3px);     /* если поддерживается */
+  border-radius: 12px;
+}
+
+#marquee{
+  width: min(700px, 90%);
+  margin: 0 auto;
+  padding: 12px 14px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+
+  height: 170px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 
@@ -538,4 +555,64 @@ div#content {
         -webkit-animation-timing-function: linear;
         opacity: 0;
     }
+}
+
+.pass-time,
+#marquee{
+  width: min(700px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.pass-time{
+  margin-top: 16px;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+  text-align: center;
+}
+
+
+/* Сцена строго по центру */
+#stage{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+}
+
+/* Текстовые блоки НЕ должны двигать сцену */
+.pass-time{
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(460px, 92%);
+  padding: 12px 14px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+  z-index: 9999;
+}
+
+#marquee{
+  position: absolute;
+  top: 140px; /* если надо — потом подвинем */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(460px, 92%);
+  height: 170px;
+  padding: 12px 14px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  z-index: 9999;
 }
