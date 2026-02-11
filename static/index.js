@@ -53,3 +53,35 @@ Container.prototype = {
         return this.passedSeconds % 60;
     },
 };
+
+// --- Riddle unlock (Part 4) ---
+window.addEventListener("load", () => {
+  const SECRET = "princess"; // <-- поменяй на нужное слово
+
+  const input = document.getElementById("secretInput");
+  const btn = document.getElementById("unlockBtn");
+  const msg = document.getElementById("riddleMsg");
+  const link = document.getElementById("nextLink");
+
+  if (!input || !btn || !msg || !link) return;
+
+  const normalize = (v) => (v || "").trim().toLowerCase();
+
+  const tryUnlock = () => {
+    if (normalize(input.value) === normalize(SECRET)) {
+      msg.textContent = "Correct. ❤️";
+      link.style.display = "inline-block";
+
+      // Если хочешь, чтобы сразу открывалось без кнопки — раскомментируй:
+      // window.open("https://vq4.vercel.app", "_blank", "noopener,noreferrer");
+    } else {
+      msg.textContent = "Not quite. Try again.";
+      link.style.display = "none";
+    }
+  };
+
+  btn.addEventListener("click", tryUnlock);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") tryUnlock();
+  });
+});
